@@ -1,0 +1,639 @@
+=== Processing Log ===
+===========[OK] Chunk 01 (chunk_00_00000-00120s.mp4): Processed successfully
+====================
+============[SKIPPED] Chunk 02 (chunk_01_00120-00240s.mp4): Tracking failed (RuntimeError: Chunk 2/17: Tracking inference failed with exit code 1:
+/home/liubov/.venv/lib/python3.10/site-packages/pyannote/audio/core/io.py:212: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/speechbrain/utils/torch_audio_backend.py:57: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  available_backends = torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py:961: UserWarning: cannot import name '_C' from 'sam2' (/home/liubov/.venv/lib/python3.10/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  pred_masks_gpu = fill_holes_in_mask_scores(
+
+propagate in video:   0%|          | 0/1800 [00:00<?, ?it/s]
+propagate in video:   0%|          | 4/1800 [00:00<00:57, 31.48it/s]
+propagate in video:   0%|          | 8/1800 [00:00<00:52, 34.10it/s]
+propagate in video:   1%|          | 12/1800 [00:00<00:51, 34.75it/s]
+propagate in video:   1%|          | 16/1800 [00:00<00:50, 35.24it/s]
+propagate in video:   1%|          | 20/1800 [00:00<00:50, 35.48it/s]
+propagate in video:   1%|▏         | 24/1800 [00:00<00:49, 35.65it/s]
+propagate in video:   2%|▏         | 28/1800 [00:00<00:49, 35.73it/s]
+propagate in video:   2%|▏         | 32/1800 [00:00<00:49, 35.75it/s]
+propagate in video:   2%|▏         | 36/1800 [00:01<00:49, 35.64it/s]
+propagate in video:   2%|▏         | 40/1800 [00:01<00:49, 35.59it/s]
+propagate in video:   2%|▏         | 44/1800 [00:01<00:49, 35.54it/s]
+propagate in video:   3%|▎         | 48/1800 [00:01<00:49, 35.36it/s]
+propagate in video:   3%|▎         | 52/1800 [00:01<00:49, 35.33it/s]
+propagate in video:   3%|▎         | 56/1800 [00:01<00:49, 35.38it/s]
+propagate in video:   3%|▎         | 60/1800 [00:01<00:49, 35.36it/s]
+propagate in video:   4%|▎         | 64/1800 [00:01<00:49, 35.42it/s]
+propagate in video:   4%|▍         | 68/1800 [00:01<00:48, 35.39it/s]
+propagate in video:   4%|▍         | 72/1800 [00:02<00:48, 35.30it/s]
+propagate in video:   4%|▍         | 76/1800 [00:02<00:48, 35.31it/s]
+propagate in video:   4%|▍         | 80/1800 [00:02<00:48, 35.22it/s]
+propagate in video:   5%|▍         | 84/1800 [00:02<00:48, 35.20it/s]
+propagate in video:   5%|▍         | 88/1800 [00:02<00:48, 35.25it/s]
+propagate in video:   5%|▌         | 92/1800 [00:02<00:48, 35.25it/s]
+propagate in video:   5%|▌         | 96/1800 [00:02<00:48, 35.19it/s]
+propagate in video:   6%|▌         | 100/1800 [00:02<00:48, 35.19it/s]
+propagate in video:   6%|▌         | 104/1800 [00:02<00:48, 35.21it/s]
+propagate in video:   6%|▌         | 108/1800 [00:03<00:48, 35.16it/s]
+propagate in video:   6%|▌         | 112/1800 [00:03<00:47, 35.19it/s]
+propagate in video:   6%|▋         | 116/1800 [00:03<00:47, 35.13it/s]
+propagate in video:   7%|▋         | 120/1800 [00:03<00:47, 35.18it/s]
+propagate in video:   7%|▋         | 121/1800 [00:03<00:47, 35.40it/s]
+Traceback (most recent call last):
+  File "/home/liubov/.venv/bin/psifx", line 10, in <module>
+    sys.exit(main())
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/command.py", line 55, in main
+    args.execute(args)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/utils/command.py", line 111, in <lambda>
+    parser.set_defaults(execute=lambda args: command.execute(parser, args))
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/command.py", line 141, in execute
+    tool.infer(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/tool.py", line 160, in infer
+    for out_frame_idx, out_obj_ids, out_mask_logits in self.predictor.propagate_in_video(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 59, in generator_context
+    response = gen.send(request)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 721, in propagate_in_video
+    current_out, pred_masks = self._run_single_frame_inference(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 937, in _run_single_frame_inference
+    current_out = self.track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 983, in track_step
+    current_out, sam_outputs, _, _ = self._track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 909, in _track_step
+    pix_feat = self._prepare_memory_conditioned_features(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 667, in _prepare_memory_conditioned_features
+    iou_score = output_dict["non_cond_frame_outputs"][i]["best_iou_score"]  # Get mask affinity score
+KeyError: 120)
+====================
+===========[OK] Chunk 03 (chunk_02_00240-00360s.mp4): Processed successfully
+====================
+===========[OK] Chunk 04 (chunk_03_00360-00480s.mp4): Processed successfully
+====================
+===========[OK] Chunk 05 (chunk_04_00480-00600s.mp4): Processed successfully
+====================
+===========[OK] Chunk 06 (chunk_05_00600-00720s.mp4): Processed successfully
+====================
+============[SKIPPED] Chunk 07 (chunk_06_00720-00840s.mp4): Tracking failed (RuntimeError: Chunk 7/17: Tracking inference failed with exit code 1:
+/home/liubov/.venv/lib/python3.10/site-packages/pyannote/audio/core/io.py:212: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/speechbrain/utils/torch_audio_backend.py:57: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  available_backends = torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py:961: UserWarning: cannot import name '_C' from 'sam2' (/home/liubov/.venv/lib/python3.10/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  pred_masks_gpu = fill_holes_in_mask_scores(
+
+propagate in video:   0%|          | 0/1800 [00:00<?, ?it/s]
+propagate in video:   0%|          | 3/1800 [00:00<01:01, 29.10it/s]
+propagate in video:   0%|          | 7/1800 [00:00<00:52, 33.95it/s]
+propagate in video:   1%|          | 11/1800 [00:00<00:50, 35.21it/s]
+propagate in video:   1%|          | 15/1800 [00:00<00:50, 35.69it/s]
+propagate in video:   1%|          | 19/1800 [00:00<00:49, 35.71it/s]
+propagate in video:   1%|▏         | 23/1800 [00:00<00:49, 35.80it/s]
+propagate in video:   2%|▏         | 27/1800 [00:00<00:49, 35.85it/s]
+propagate in video:   2%|▏         | 31/1800 [00:00<00:49, 35.91it/s]
+propagate in video:   2%|▏         | 35/1800 [00:00<00:49, 35.93it/s]
+propagate in video:   2%|▏         | 39/1800 [00:01<00:49, 35.80it/s]
+propagate in video:   2%|▏         | 43/1800 [00:01<00:49, 35.84it/s]
+propagate in video:   3%|▎         | 47/1800 [00:01<00:48, 35.89it/s]
+propagate in video:   3%|▎         | 51/1800 [00:01<00:48, 35.91it/s]
+propagate in video:   3%|▎         | 55/1800 [00:01<00:48, 35.93it/s]
+propagate in video:   3%|▎         | 59/1800 [00:01<00:48, 35.95it/s]
+propagate in video:   4%|▎         | 63/1800 [00:01<00:48, 35.91it/s]
+propagate in video:   4%|▎         | 67/1800 [00:01<00:48, 35.90it/s]
+propagate in video:   4%|▍         | 71/1800 [00:01<00:48, 35.90it/s]
+propagate in video:   4%|▍         | 75/1800 [00:02<00:48, 35.74it/s]
+propagate in video:   4%|▍         | 79/1800 [00:02<00:48, 35.79it/s]
+propagate in video:   5%|▍         | 83/1800 [00:02<00:48, 35.73it/s]
+propagate in video:   5%|▍         | 87/1800 [00:02<00:47, 35.79it/s]
+propagate in video:   5%|▌         | 91/1800 [00:02<00:47, 35.81it/s]
+propagate in video:   5%|▌         | 95/1800 [00:02<00:47, 35.83it/s]
+propagate in video:   6%|▌         | 99/1800 [00:02<00:47, 35.84it/s]
+propagate in video:   6%|▌         | 103/1800 [00:02<00:47, 35.86it/s]
+propagate in video:   6%|▌         | 107/1800 [00:02<00:47, 35.85it/s]
+propagate in video:   6%|▌         | 111/1800 [00:03<00:47, 35.74it/s]
+propagate in video:   6%|▋         | 115/1800 [00:03<00:47, 35.74it/s]
+propagate in video:   7%|▋         | 119/1800 [00:03<00:47, 35.61it/s]
+propagate in video:   7%|▋         | 123/1800 [00:03<00:47, 35.63it/s]
+propagate in video:   7%|▋         | 127/1800 [00:03<00:46, 35.67it/s]
+propagate in video:   7%|▋         | 131/1800 [00:03<00:46, 35.73it/s]
+propagate in video:   8%|▊         | 135/1800 [00:03<00:46, 35.79it/s]
+propagate in video:   8%|▊         | 139/1800 [00:03<00:46, 35.53it/s]
+propagate in video:   8%|▊         | 143/1800 [00:04<00:46, 35.43it/s]
+propagate in video:   8%|▊         | 147/1800 [00:04<00:46, 35.48it/s]
+propagate in video:   8%|▊         | 151/1800 [00:04<00:46, 35.62it/s]
+propagate in video:   9%|▊         | 155/1800 [00:04<00:46, 35.73it/s]
+propagate in video:   9%|▉         | 159/1800 [00:04<00:45, 35.79it/s]
+propagate in video:   9%|▉         | 163/1800 [00:04<00:45, 35.85it/s]
+propagate in video:   9%|▉         | 167/1800 [00:04<00:45, 35.90it/s]
+propagate in video:  10%|▉         | 171/1800 [00:04<00:45, 35.92it/s]
+propagate in video:  10%|▉         | 175/1800 [00:04<00:45, 35.94it/s]
+propagate in video:  10%|▉         | 179/1800 [00:05<00:45, 35.95it/s]
+propagate in video:  10%|█         | 183/1800 [00:05<00:45, 35.74it/s]
+propagate in video:  10%|█         | 187/1800 [00:05<00:45, 35.79it/s]
+propagate in video:  11%|█         | 191/1800 [00:05<00:44, 35.83it/s]
+propagate in video:  11%|█         | 195/1800 [00:05<00:44, 35.87it/s]
+propagate in video:  11%|█         | 199/1800 [00:05<00:44, 35.88it/s]
+propagate in video:  11%|█▏        | 203/1800 [00:05<00:44, 35.89it/s]
+propagate in video:  12%|█▏        | 207/1800 [00:05<00:44, 35.88it/s]
+propagate in video:  12%|█▏        | 211/1800 [00:05<00:44, 35.88it/s]
+propagate in video:  12%|█▏        | 215/1800 [00:06<00:44, 35.76it/s]
+propagate in video:  12%|█▏        | 219/1800 [00:06<00:44, 35.69it/s]
+propagate in video:  12%|█▏        | 223/1800 [00:06<00:44, 35.77it/s]
+propagate in video:  13%|█▎        | 227/1800 [00:06<00:43, 35.82it/s]
+propagate in video:  13%|█▎        | 231/1800 [00:06<00:43, 35.86it/s]
+propagate in video:  13%|█▎        | 235/1800 [00:06<00:43, 35.82it/s]
+propagate in video:  13%|█▎        | 239/1800 [00:06<00:43, 35.83it/s]
+propagate in video:  13%|█▎        | 241/1800 [00:06<00:43, 35.82it/s]
+Traceback (most recent call last):
+  File "/home/liubov/.venv/bin/psifx", line 10, in <module>
+    sys.exit(main())
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/command.py", line 55, in main
+    args.execute(args)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/utils/command.py", line 111, in <lambda>
+    parser.set_defaults(execute=lambda args: command.execute(parser, args))
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/command.py", line 141, in execute
+    tool.infer(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/tool.py", line 160, in infer
+    for out_frame_idx, out_obj_ids, out_mask_logits in self.predictor.propagate_in_video(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 59, in generator_context
+    response = gen.send(request)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 721, in propagate_in_video
+    current_out, pred_masks = self._run_single_frame_inference(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 937, in _run_single_frame_inference
+    current_out = self.track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 983, in track_step
+    current_out, sam_outputs, _, _ = self._track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 909, in _track_step
+    pix_feat = self._prepare_memory_conditioned_features(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 667, in _prepare_memory_conditioned_features
+    iou_score = output_dict["non_cond_frame_outputs"][i]["best_iou_score"]  # Get mask affinity score
+KeyError: 240)
+====================
+===========[OK] Chunk 08 (chunk_07_00840-00960s.mp4): Processed successfully
+====================
+============[SKIPPED] Chunk 09 (chunk_08_00960-01080s.mp4): Tracking failed (RuntimeError: Chunk 9/17: Tracking inference failed with exit code 1:
+/home/liubov/.venv/lib/python3.10/site-packages/pyannote/audio/core/io.py:212: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/speechbrain/utils/torch_audio_backend.py:57: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  available_backends = torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py:961: UserWarning: cannot import name '_C' from 'sam2' (/home/liubov/.venv/lib/python3.10/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  pred_masks_gpu = fill_holes_in_mask_scores(
+
+propagate in video:   0%|          | 0/1800 [00:00<?, ?it/s]
+propagate in video:   0%|          | 4/1800 [00:00<00:56, 31.73it/s]
+propagate in video:   0%|          | 8/1800 [00:00<00:52, 34.26it/s]
+propagate in video:   1%|          | 12/1800 [00:00<00:51, 34.93it/s]
+propagate in video:   1%|          | 16/1800 [00:00<00:50, 35.30it/s]
+propagate in video:   1%|          | 20/1800 [00:00<00:50, 35.44it/s]
+propagate in video:   1%|▏         | 24/1800 [00:00<00:49, 35.52it/s]
+propagate in video:   2%|▏         | 28/1800 [00:00<00:49, 35.51it/s]
+propagate in video:   2%|▏         | 32/1800 [00:00<00:49, 35.53it/s]
+propagate in video:   2%|▏         | 36/1800 [00:01<00:49, 35.53it/s]
+propagate in video:   2%|▏         | 40/1800 [00:01<00:49, 35.53it/s]
+propagate in video:   2%|▏         | 44/1800 [00:01<00:49, 35.53it/s]
+propagate in video:   3%|▎         | 48/1800 [00:01<00:49, 35.42it/s]
+propagate in video:   3%|▎         | 52/1800 [00:01<00:49, 35.46it/s]
+propagate in video:   3%|▎         | 56/1800 [00:01<00:49, 35.46it/s]
+propagate in video:   3%|▎         | 60/1800 [00:01<00:49, 35.50it/s]
+propagate in video:   4%|▎         | 64/1800 [00:01<00:48, 35.51it/s]
+propagate in video:   4%|▍         | 68/1800 [00:01<00:48, 35.52it/s]
+propagate in video:   4%|▍         | 72/1800 [00:02<00:48, 35.54it/s]
+propagate in video:   4%|▍         | 76/1800 [00:02<00:48, 35.56it/s]
+propagate in video:   4%|▍         | 80/1800 [00:02<00:48, 35.60it/s]
+propagate in video:   5%|▍         | 84/1800 [00:02<00:48, 35.35it/s]
+propagate in video:   5%|▍         | 88/1800 [00:02<00:48, 35.43it/s]
+propagate in video:   5%|▌         | 92/1800 [00:02<00:48, 35.45it/s]
+propagate in video:   5%|▌         | 96/1800 [00:02<00:48, 35.38it/s]
+propagate in video:   6%|▌         | 100/1800 [00:02<00:48, 35.39it/s]
+propagate in video:   6%|▌         | 104/1800 [00:02<00:47, 35.36it/s]
+propagate in video:   6%|▌         | 108/1800 [00:03<00:47, 35.39it/s]
+propagate in video:   6%|▌         | 112/1800 [00:03<00:47, 35.34it/s]
+propagate in video:   6%|▋         | 116/1800 [00:03<00:47, 35.34it/s]
+propagate in video:   7%|▋         | 120/1800 [00:03<00:47, 35.17it/s]
+propagate in video:   7%|▋         | 124/1800 [00:03<00:47, 35.23it/s]
+propagate in video:   7%|▋         | 128/1800 [00:03<00:47, 35.29it/s]
+propagate in video:   7%|▋         | 132/1800 [00:03<00:47, 35.32it/s]
+propagate in video:   8%|▊         | 136/1800 [00:03<00:47, 35.36it/s]
+propagate in video:   8%|▊         | 140/1800 [00:03<00:46, 35.36it/s]
+propagate in video:   8%|▊         | 144/1800 [00:04<00:46, 35.40it/s]
+propagate in video:   8%|▊         | 148/1800 [00:04<00:46, 35.42it/s]
+propagate in video:   8%|▊         | 152/1800 [00:04<00:46, 35.40it/s]
+propagate in video:   9%|▊         | 156/1800 [00:04<00:46, 35.31it/s]
+propagate in video:   9%|▉         | 160/1800 [00:04<00:46, 35.34it/s]
+propagate in video:   9%|▉         | 164/1800 [00:04<00:46, 35.41it/s]
+propagate in video:   9%|▉         | 168/1800 [00:04<00:46, 35.43it/s]
+propagate in video:  10%|▉         | 172/1800 [00:04<00:45, 35.45it/s]
+propagate in video:  10%|▉         | 176/1800 [00:04<00:45, 35.47it/s]
+propagate in video:  10%|█         | 180/1800 [00:05<00:45, 35.48it/s]
+propagate in video:  10%|█         | 181/1800 [00:05<00:45, 35.47it/s]
+Traceback (most recent call last):
+  File "/home/liubov/.venv/bin/psifx", line 10, in <module>
+    sys.exit(main())
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/command.py", line 55, in main
+    args.execute(args)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/utils/command.py", line 111, in <lambda>
+    parser.set_defaults(execute=lambda args: command.execute(parser, args))
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/command.py", line 141, in execute
+    tool.infer(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/tool.py", line 160, in infer
+    for out_frame_idx, out_obj_ids, out_mask_logits in self.predictor.propagate_in_video(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 59, in generator_context
+    response = gen.send(request)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 721, in propagate_in_video
+    current_out, pred_masks = self._run_single_frame_inference(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 937, in _run_single_frame_inference
+    current_out = self.track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 983, in track_step
+    current_out, sam_outputs, _, _ = self._track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 909, in _track_step
+    pix_feat = self._prepare_memory_conditioned_features(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 667, in _prepare_memory_conditioned_features
+    iou_score = output_dict["non_cond_frame_outputs"][i]["best_iou_score"]  # Get mask affinity score
+KeyError: 180)
+====================
+===========[OK] Chunk 10 (chunk_09_01080-01200s.mp4): Processed successfully
+====================
+============[SKIPPED] Chunk 11 (chunk_10_01200-01320s.mp4): Tracking failed (RuntimeError: Chunk 11/17: Tracking inference failed with exit code 1:
+/home/liubov/.venv/lib/python3.10/site-packages/pyannote/audio/core/io.py:212: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/speechbrain/utils/torch_audio_backend.py:57: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  available_backends = torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py:961: UserWarning: cannot import name '_C' from 'sam2' (/home/liubov/.venv/lib/python3.10/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  pred_masks_gpu = fill_holes_in_mask_scores(
+
+propagate in video:   0%|          | 0/1800 [00:00<?, ?it/s]
+propagate in video:   0%|          | 3/1800 [00:00<01:02, 28.58it/s]
+propagate in video:   0%|          | 7/1800 [00:00<00:54, 33.17it/s]
+propagate in video:   1%|          | 11/1800 [00:00<00:51, 34.58it/s]
+propagate in video:   1%|          | 15/1800 [00:00<00:50, 35.26it/s]
+propagate in video:   1%|          | 19/1800 [00:00<00:50, 35.42it/s]
+propagate in video:   1%|▏         | 23/1800 [00:00<00:49, 35.55it/s]
+propagate in video:   2%|▏         | 27/1800 [00:00<00:50, 35.31it/s]
+propagate in video:   2%|▏         | 31/1800 [00:00<00:49, 35.49it/s]
+Traceback (most recent call last):
+  File "/home/liubov/.venv/bin/psifx", line 10, in <module>
+    sys.exit(main())
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/command.py", line 55, in main
+    args.execute(args)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/utils/command.py", line 111, in <lambda>
+    parser.set_defaults(execute=lambda args: command.execute(parser, args))
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/command.py", line 141, in execute
+    tool.infer(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/tool.py", line 160, in infer
+    for out_frame_idx, out_obj_ids, out_mask_logits in self.predictor.propagate_in_video(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 59, in generator_context
+    response = gen.send(request)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 721, in propagate_in_video
+    current_out, pred_masks = self._run_single_frame_inference(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 937, in _run_single_frame_inference
+    current_out = self.track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 983, in track_step
+    current_out, sam_outputs, _, _ = self._track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 909, in _track_step
+    pix_feat = self._prepare_memory_conditioned_features(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 667, in _prepare_memory_conditioned_features
+    iou_score = output_dict["non_cond_frame_outputs"][i]["best_iou_score"]  # Get mask affinity score
+KeyError: 30)
+====================
+============[SKIPPED] Chunk 12 (chunk_11_01320-01440s.mp4): Tracking failed (RuntimeError: Chunk 12/17: Tracking inference failed with exit code 1:
+/home/liubov/.venv/lib/python3.10/site-packages/pyannote/audio/core/io.py:212: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/speechbrain/utils/torch_audio_backend.py:57: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  available_backends = torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py:961: UserWarning: cannot import name '_C' from 'sam2' (/home/liubov/.venv/lib/python3.10/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  pred_masks_gpu = fill_holes_in_mask_scores(
+
+propagate in video:   0%|          | 0/1800 [00:00<?, ?it/s]
+propagate in video:   0%|          | 4/1800 [00:00<00:57, 31.39it/s]
+propagate in video:   0%|          | 8/1800 [00:00<00:52, 33.96it/s]
+propagate in video:   1%|          | 12/1800 [00:00<00:51, 34.72it/s]
+propagate in video:   1%|          | 16/1800 [00:00<00:50, 34.98it/s]
+propagate in video:   1%|          | 20/1800 [00:00<00:50, 35.08it/s]
+propagate in video:   1%|▏         | 24/1800 [00:00<00:50, 35.18it/s]
+propagate in video:   2%|▏         | 28/1800 [00:00<00:50, 35.24it/s]
+propagate in video:   2%|▏         | 32/1800 [00:00<00:50, 35.31it/s]
+propagate in video:   2%|▏         | 36/1800 [00:01<00:49, 35.32it/s]
+propagate in video:   2%|▏         | 40/1800 [00:01<00:49, 35.22it/s]
+propagate in video:   2%|▏         | 44/1800 [00:01<00:49, 35.22it/s]
+propagate in video:   3%|▎         | 48/1800 [00:01<00:49, 35.24it/s]
+propagate in video:   3%|▎         | 52/1800 [00:01<00:50, 34.85it/s]
+propagate in video:   3%|▎         | 56/1800 [00:01<00:49, 35.00it/s]
+propagate in video:   3%|▎         | 60/1800 [00:01<00:49, 35.06it/s]
+propagate in video:   4%|▎         | 64/1800 [00:01<00:49, 35.14it/s]
+propagate in video:   4%|▍         | 68/1800 [00:01<00:49, 35.18it/s]
+propagate in video:   4%|▍         | 72/1800 [00:02<00:48, 35.27it/s]
+propagate in video:   4%|▍         | 76/1800 [00:02<00:48, 35.30it/s]
+propagate in video:   4%|▍         | 80/1800 [00:02<00:48, 35.37it/s]
+propagate in video:   5%|▍         | 84/1800 [00:02<00:49, 34.92it/s]
+propagate in video:   5%|▍         | 88/1800 [00:02<00:48, 35.09it/s]
+propagate in video:   5%|▌         | 91/1800 [00:02<00:48, 35.25it/s]
+Traceback (most recent call last):
+  File "/home/liubov/.venv/bin/psifx", line 10, in <module>
+    sys.exit(main())
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/command.py", line 55, in main
+    args.execute(args)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/utils/command.py", line 111, in <lambda>
+    parser.set_defaults(execute=lambda args: command.execute(parser, args))
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/command.py", line 141, in execute
+    tool.infer(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/tool.py", line 160, in infer
+    for out_frame_idx, out_obj_ids, out_mask_logits in self.predictor.propagate_in_video(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 59, in generator_context
+    response = gen.send(request)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 721, in propagate_in_video
+    current_out, pred_masks = self._run_single_frame_inference(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 937, in _run_single_frame_inference
+    current_out = self.track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 983, in track_step
+    current_out, sam_outputs, _, _ = self._track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 909, in _track_step
+    pix_feat = self._prepare_memory_conditioned_features(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 667, in _prepare_memory_conditioned_features
+    iou_score = output_dict["non_cond_frame_outputs"][i]["best_iou_score"]  # Get mask affinity score
+KeyError: 90)
+====================
+===========[OK] Chunk 13 (chunk_12_01440-01560s.mp4): Processed successfully
+====================
+===========[OK] Chunk 14 (chunk_13_01560-01680s.mp4): Processed successfully
+====================
+============[SKIPPED] Chunk 15 (chunk_14_01680-01800s.mp4): Tracking failed (RuntimeError: Chunk 15/17: Tracking inference failed with exit code 1:
+/home/liubov/.venv/lib/python3.10/site-packages/pyannote/audio/core/io.py:212: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/speechbrain/utils/torch_audio_backend.py:57: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  available_backends = torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py:961: UserWarning: cannot import name '_C' from 'sam2' (/home/liubov/.venv/lib/python3.10/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  pred_masks_gpu = fill_holes_in_mask_scores(
+
+propagate in video:   0%|          | 0/1800 [00:00<?, ?it/s]
+propagate in video:   0%|          | 3/1800 [00:00<01:04, 28.02it/s]
+propagate in video:   0%|          | 7/1800 [00:00<00:55, 32.34it/s]
+propagate in video:   1%|          | 11/1800 [00:00<00:53, 33.63it/s]
+propagate in video:   1%|          | 15/1800 [00:00<00:51, 34.33it/s]
+propagate in video:   1%|          | 19/1800 [00:00<00:51, 34.56it/s]
+propagate in video:   1%|▏         | 23/1800 [00:00<00:51, 34.64it/s]
+propagate in video:   2%|▏         | 27/1800 [00:00<00:51, 34.59it/s]
+propagate in video:   2%|▏         | 31/1800 [00:00<00:51, 34.51it/s]
+propagate in video:   2%|▏         | 35/1800 [00:01<00:51, 34.52it/s]
+propagate in video:   2%|▏         | 39/1800 [00:01<00:51, 34.26it/s]
+propagate in video:   2%|▏         | 43/1800 [00:01<00:51, 34.14it/s]
+propagate in video:   3%|▎         | 47/1800 [00:01<00:51, 34.31it/s]
+propagate in video:   3%|▎         | 51/1800 [00:01<00:50, 34.44it/s]
+propagate in video:   3%|▎         | 55/1800 [00:01<00:50, 34.56it/s]
+propagate in video:   3%|▎         | 59/1800 [00:01<00:50, 34.63it/s]
+propagate in video:   4%|▎         | 63/1800 [00:01<00:50, 34.71it/s]
+propagate in video:   4%|▎         | 67/1800 [00:01<00:49, 34.71it/s]
+propagate in video:   4%|▍         | 71/1800 [00:02<00:49, 34.64it/s]
+propagate in video:   4%|▍         | 75/1800 [00:02<00:49, 34.68it/s]
+propagate in video:   4%|▍         | 79/1800 [00:02<00:49, 34.72it/s]
+propagate in video:   5%|▍         | 83/1800 [00:02<00:49, 34.66it/s]
+propagate in video:   5%|▍         | 87/1800 [00:02<00:49, 34.72it/s]
+propagate in video:   5%|▌         | 91/1800 [00:02<00:49, 34.72it/s]
+propagate in video:   5%|▌         | 95/1800 [00:02<00:49, 34.73it/s]
+propagate in video:   6%|▌         | 99/1800 [00:02<00:48, 34.75it/s]
+propagate in video:   6%|▌         | 103/1800 [00:02<00:48, 34.75it/s]
+propagate in video:   6%|▌         | 107/1800 [00:03<00:48, 34.63it/s]
+propagate in video:   6%|▌         | 111/1800 [00:03<00:48, 34.68it/s]
+propagate in video:   6%|▋         | 115/1800 [00:03<00:48, 34.69it/s]
+propagate in video:   7%|▋         | 119/1800 [00:03<00:48, 34.70it/s]
+propagate in video:   7%|▋         | 121/1800 [00:03<00:48, 34.62it/s]
+Traceback (most recent call last):
+  File "/home/liubov/.venv/bin/psifx", line 10, in <module>
+    sys.exit(main())
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/command.py", line 55, in main
+    args.execute(args)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/utils/command.py", line 111, in <lambda>
+    parser.set_defaults(execute=lambda args: command.execute(parser, args))
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/command.py", line 141, in execute
+    tool.infer(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/tool.py", line 160, in infer
+    for out_frame_idx, out_obj_ids, out_mask_logits in self.predictor.propagate_in_video(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 59, in generator_context
+    response = gen.send(request)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 721, in propagate_in_video
+    current_out, pred_masks = self._run_single_frame_inference(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 937, in _run_single_frame_inference
+    current_out = self.track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 983, in track_step
+    current_out, sam_outputs, _, _ = self._track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 909, in _track_step
+    pix_feat = self._prepare_memory_conditioned_features(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 667, in _prepare_memory_conditioned_features
+    iou_score = output_dict["non_cond_frame_outputs"][i]["best_iou_score"]  # Get mask affinity score
+KeyError: 120)
+====================
+===========[OK] Chunk 16 (chunk_15_01800-01920s.mp4): Processed successfully
+====================
+============[SKIPPED] Chunk 17 (chunk_16_01920-02019s.mp4): Tracking failed (RuntimeError: Chunk 17/17: Tracking inference failed with exit code 1:
+/home/liubov/.venv/lib/python3.10/site-packages/pyannote/audio/core/io.py:212: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/speechbrain/utils/torch_audio_backend.py:57: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release. 
+  available_backends = torchaudio.list_audio_backends()
+/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py:961: UserWarning: cannot import name '_C' from 'sam2' (/home/liubov/.venv/lib/python3.10/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  pred_masks_gpu = fill_holes_in_mask_scores(
+
+propagate in video:   0%|          | 0/1494 [00:00<?, ?it/s]
+propagate in video:   0%|          | 4/1494 [00:00<00:46, 31.97it/s]
+propagate in video:   1%|          | 8/1494 [00:00<00:43, 34.37it/s]
+propagate in video:   1%|          | 12/1494 [00:00<00:42, 35.14it/s]
+propagate in video:   1%|          | 16/1494 [00:00<00:41, 35.56it/s]
+propagate in video:   1%|▏         | 20/1494 [00:00<00:41, 35.79it/s]
+propagate in video:   2%|▏         | 24/1494 [00:00<00:40, 35.94it/s]
+propagate in video:   2%|▏         | 28/1494 [00:00<00:40, 35.78it/s]
+propagate in video:   2%|▏         | 32/1494 [00:00<00:40, 35.92it/s]
+propagate in video:   2%|▏         | 36/1494 [00:01<00:40, 35.93it/s]
+propagate in video:   3%|▎         | 40/1494 [00:01<00:40, 35.98it/s]
+propagate in video:   3%|▎         | 44/1494 [00:01<00:40, 36.07it/s]
+propagate in video:   3%|▎         | 48/1494 [00:01<00:40, 36.12it/s]
+propagate in video:   3%|▎         | 52/1494 [00:01<00:39, 36.15it/s]
+propagate in video:   4%|▎         | 56/1494 [00:01<00:39, 36.18it/s]
+propagate in video:   4%|▍         | 60/1494 [00:01<00:39, 36.21it/s]
+propagate in video:   4%|▍         | 64/1494 [00:01<00:39, 36.07it/s]
+propagate in video:   5%|▍         | 68/1494 [00:01<00:39, 36.11it/s]
+propagate in video:   5%|▍         | 72/1494 [00:02<00:39, 36.06it/s]
+propagate in video:   5%|▌         | 76/1494 [00:02<00:39, 36.05it/s]
+propagate in video:   5%|▌         | 80/1494 [00:02<00:39, 35.97it/s]
+propagate in video:   6%|▌         | 84/1494 [00:02<00:39, 35.96it/s]
+propagate in video:   6%|▌         | 88/1494 [00:02<00:39, 35.92it/s]
+propagate in video:   6%|▌         | 92/1494 [00:02<00:39, 35.89it/s]
+propagate in video:   6%|▋         | 96/1494 [00:02<00:38, 35.88it/s]
+propagate in video:   7%|▋         | 100/1494 [00:02<00:39, 35.73it/s]
+propagate in video:   7%|▋         | 104/1494 [00:02<00:38, 35.69it/s]
+propagate in video:   7%|▋         | 108/1494 [00:03<00:38, 35.66it/s]
+propagate in video:   7%|▋         | 112/1494 [00:03<00:38, 35.63it/s]
+propagate in video:   8%|▊         | 116/1494 [00:03<00:38, 35.65it/s]
+propagate in video:   8%|▊         | 120/1494 [00:03<00:38, 35.67it/s]
+propagate in video:   8%|▊         | 124/1494 [00:03<00:38, 35.68it/s]
+propagate in video:   9%|▊         | 128/1494 [00:03<00:38, 35.59it/s]
+propagate in video:   9%|▉         | 132/1494 [00:03<00:38, 35.60it/s]
+propagate in video:   9%|▉         | 136/1494 [00:03<00:38, 35.44it/s]
+propagate in video:   9%|▉         | 140/1494 [00:03<00:38, 35.46it/s]
+propagate in video:  10%|▉         | 144/1494 [00:04<00:38, 35.42it/s]
+propagate in video:  10%|▉         | 148/1494 [00:04<00:37, 35.43it/s]
+propagate in video:  10%|█         | 152/1494 [00:04<00:37, 35.40it/s]
+propagate in video:  10%|█         | 156/1494 [00:04<00:37, 35.39it/s]
+propagate in video:  11%|█         | 160/1494 [00:04<00:37, 35.35it/s]
+propagate in video:  11%|█         | 164/1494 [00:04<00:37, 35.29it/s]
+propagate in video:  11%|█         | 168/1494 [00:04<00:37, 35.26it/s]
+propagate in video:  12%|█▏        | 172/1494 [00:04<00:37, 35.14it/s]
+propagate in video:  12%|█▏        | 176/1494 [00:04<00:37, 35.15it/s]
+propagate in video:  12%|█▏        | 180/1494 [00:05<00:37, 35.15it/s]
+propagate in video:  12%|█▏        | 184/1494 [00:05<00:37, 35.15it/s]
+propagate in video:  13%|█▎        | 188/1494 [00:05<00:37, 35.13it/s]
+propagate in video:  13%|█▎        | 192/1494 [00:05<00:37, 35.11it/s]
+propagate in video:  13%|█▎        | 196/1494 [00:05<00:37, 35.07it/s]
+propagate in video:  13%|█▎        | 200/1494 [00:05<00:37, 34.97it/s]
+propagate in video:  14%|█▎        | 204/1494 [00:05<00:37, 34.68it/s]
+propagate in video:  14%|█▍        | 208/1494 [00:05<00:37, 34.36it/s]
+propagate in video:  14%|█▍        | 212/1494 [00:05<00:37, 34.39it/s]
+propagate in video:  14%|█▍        | 216/1494 [00:06<00:37, 34.41it/s]
+propagate in video:  15%|█▍        | 220/1494 [00:06<00:36, 34.50it/s]
+propagate in video:  15%|█▍        | 224/1494 [00:06<00:36, 34.57it/s]
+propagate in video:  15%|█▌        | 228/1494 [00:06<00:36, 34.62it/s]
+propagate in video:  16%|█▌        | 232/1494 [00:06<00:36, 34.62it/s]
+propagate in video:  16%|█▌        | 236/1494 [00:06<00:36, 34.62it/s]
+propagate in video:  16%|█▌        | 240/1494 [00:06<00:36, 34.49it/s]
+propagate in video:  16%|█▋        | 244/1494 [00:06<00:36, 34.54it/s]
+propagate in video:  17%|█▋        | 248/1494 [00:07<00:36, 34.54it/s]
+propagate in video:  17%|█▋        | 252/1494 [00:07<00:35, 34.55it/s]
+propagate in video:  17%|█▋        | 256/1494 [00:07<00:35, 34.53it/s]
+propagate in video:  17%|█▋        | 260/1494 [00:07<00:35, 34.50it/s]
+propagate in video:  18%|█▊        | 264/1494 [00:07<00:35, 34.47it/s]
+propagate in video:  18%|█▊        | 268/1494 [00:07<00:35, 34.44it/s]
+propagate in video:  18%|█▊        | 272/1494 [00:07<00:35, 34.42it/s]
+propagate in video:  18%|█▊        | 276/1494 [00:07<00:35, 34.29it/s]
+propagate in video:  19%|█▊        | 280/1494 [00:07<00:35, 34.30it/s]
+propagate in video:  19%|█▉        | 284/1494 [00:08<00:35, 34.29it/s]
+propagate in video:  19%|█▉        | 288/1494 [00:08<00:35, 34.29it/s]
+propagate in video:  20%|█▉        | 292/1494 [00:08<00:35, 34.05it/s]
+propagate in video:  20%|█▉        | 296/1494 [00:08<00:35, 34.02it/s]
+propagate in video:  20%|██        | 300/1494 [00:08<00:35, 34.02it/s]
+propagate in video:  20%|██        | 304/1494 [00:08<00:34, 34.03it/s]
+propagate in video:  21%|██        | 308/1494 [00:08<00:34, 33.95it/s]
+propagate in video:  21%|██        | 312/1494 [00:08<00:34, 33.97it/s]
+propagate in video:  21%|██        | 316/1494 [00:09<00:34, 33.99it/s]
+propagate in video:  21%|██▏       | 320/1494 [00:09<00:34, 33.98it/s]
+propagate in video:  22%|██▏       | 324/1494 [00:09<00:34, 33.98it/s]
+propagate in video:  22%|██▏       | 328/1494 [00:09<00:34, 33.95it/s]
+propagate in video:  22%|██▏       | 332/1494 [00:09<00:34, 33.95it/s]
+propagate in video:  22%|██▏       | 336/1494 [00:09<00:34, 33.92it/s]
+propagate in video:  23%|██▎       | 340/1494 [00:09<00:34, 33.87it/s]
+propagate in video:  23%|██▎       | 344/1494 [00:09<00:34, 33.70it/s]
+propagate in video:  23%|██▎       | 348/1494 [00:09<00:33, 33.73it/s]
+propagate in video:  24%|██▎       | 352/1494 [00:10<00:33, 33.74it/s]
+propagate in video:  24%|██▍       | 356/1494 [00:10<00:33, 33.77it/s]
+propagate in video:  24%|██▍       | 360/1494 [00:10<00:33, 33.76it/s]
+propagate in video:  24%|██▍       | 364/1494 [00:10<00:33, 33.75it/s]
+propagate in video:  25%|██▍       | 368/1494 [00:10<00:33, 33.74it/s]
+propagate in video:  25%|██▍       | 372/1494 [00:10<00:33, 33.72it/s]
+propagate in video:  25%|██▌       | 376/1494 [00:10<00:33, 33.58it/s]
+propagate in video:  25%|██▌       | 380/1494 [00:10<00:33, 33.61it/s]
+propagate in video:  26%|██▌       | 384/1494 [00:11<00:33, 33.59it/s]
+propagate in video:  26%|██▌       | 388/1494 [00:11<00:32, 33.58it/s]
+propagate in video:  26%|██▌       | 392/1494 [00:11<00:32, 33.55it/s]
+propagate in video:  27%|██▋       | 396/1494 [00:11<00:32, 33.54it/s]
+propagate in video:  27%|██▋       | 400/1494 [00:11<00:32, 33.52it/s]
+propagate in video:  27%|██▋       | 404/1494 [00:11<00:32, 33.49it/s]
+propagate in video:  27%|██▋       | 408/1494 [00:11<00:32, 33.47it/s]
+propagate in video:  28%|██▊       | 412/1494 [00:11<00:32, 33.35it/s]
+propagate in video:  28%|██▊       | 416/1494 [00:11<00:32, 33.33it/s]
+propagate in video:  28%|██▊       | 420/1494 [00:12<00:32, 33.34it/s]
+propagate in video:  28%|██▊       | 424/1494 [00:12<00:32, 33.31it/s]
+propagate in video:  29%|██▊       | 428/1494 [00:12<00:32, 33.31it/s]
+propagate in video:  29%|██▉       | 432/1494 [00:12<00:31, 33.29it/s]
+propagate in video:  29%|██▉       | 436/1494 [00:12<00:31, 33.27it/s]
+propagate in video:  29%|██▉       | 440/1494 [00:12<00:31, 33.18it/s]
+propagate in video:  30%|██▉       | 444/1494 [00:12<00:31, 32.98it/s]
+propagate in video:  30%|██▉       | 448/1494 [00:12<00:31, 32.96it/s]
+propagate in video:  30%|███       | 452/1494 [00:13<00:31, 32.95it/s]
+propagate in video:  31%|███       | 456/1494 [00:13<00:31, 32.95it/s]
+propagate in video:  31%|███       | 460/1494 [00:13<00:31, 32.97it/s]
+propagate in video:  31%|███       | 464/1494 [00:13<00:31, 32.96it/s]
+propagate in video:  31%|███▏      | 468/1494 [00:13<00:31, 32.95it/s]
+propagate in video:  32%|███▏      | 472/1494 [00:13<00:31, 32.91it/s]
+propagate in video:  32%|███▏      | 476/1494 [00:13<00:31, 32.77it/s]
+propagate in video:  32%|███▏      | 480/1494 [00:13<00:30, 32.79it/s]
+propagate in video:  32%|███▏      | 484/1494 [00:14<00:30, 32.80it/s]
+propagate in video:  33%|███▎      | 488/1494 [00:14<00:30, 32.80it/s]
+propagate in video:  33%|███▎      | 492/1494 [00:14<00:30, 32.78it/s]
+propagate in video:  33%|███▎      | 496/1494 [00:14<00:30, 32.73it/s]
+propagate in video:  33%|███▎      | 500/1494 [00:14<00:30, 32.72it/s]
+propagate in video:  34%|███▎      | 504/1494 [00:14<00:30, 32.69it/s]
+propagate in video:  34%|███▍      | 508/1494 [00:14<00:30, 32.61it/s]
+propagate in video:  34%|███▍      | 512/1494 [00:14<00:30, 32.61it/s]
+propagate in video:  35%|███▍      | 516/1494 [00:15<00:29, 32.61it/s]
+propagate in video:  35%|███▍      | 520/1494 [00:15<00:29, 32.59it/s]
+propagate in video:  35%|███▌      | 524/1494 [00:15<00:29, 32.58it/s]
+propagate in video:  35%|███▌      | 528/1494 [00:15<00:29, 32.57it/s]
+propagate in video:  36%|███▌      | 532/1494 [00:15<00:29, 32.38it/s]
+propagate in video:  36%|███▌      | 536/1494 [00:15<00:29, 32.33it/s]
+propagate in video:  36%|███▌      | 540/1494 [00:15<00:29, 32.10it/s]
+propagate in video:  36%|███▋      | 544/1494 [00:15<00:29, 32.12it/s]
+propagate in video:  37%|███▋      | 548/1494 [00:16<00:29, 32.16it/s]
+propagate in video:  37%|███▋      | 552/1494 [00:16<00:29, 32.09it/s]
+propagate in video:  37%|███▋      | 556/1494 [00:16<00:29, 31.97it/s]
+propagate in video:  37%|███▋      | 560/1494 [00:16<00:29, 32.06it/s]
+propagate in video:  38%|███▊      | 564/1494 [00:16<00:29, 31.68it/s]
+propagate in video:  38%|███▊      | 568/1494 [00:16<00:29, 31.74it/s]
+propagate in video:  38%|███▊      | 572/1494 [00:16<00:29, 31.70it/s]
+propagate in video:  39%|███▊      | 576/1494 [00:16<00:28, 31.71it/s]
+propagate in video:  39%|███▉      | 580/1494 [00:17<00:28, 32.15it/s]
+propagate in video:  39%|███▉      | 584/1494 [00:17<00:27, 33.06it/s]
+propagate in video:  39%|███▉      | 588/1494 [00:17<00:26, 33.71it/s]
+propagate in video:  40%|███▉      | 592/1494 [00:17<00:26, 34.20it/s]
+propagate in video:  40%|███▉      | 596/1494 [00:17<00:26, 34.42it/s]
+propagate in video:  40%|████      | 600/1494 [00:17<00:25, 34.70it/s]
+propagate in video:  40%|████      | 604/1494 [00:17<00:25, 34.88it/s]
+propagate in video:  41%|████      | 608/1494 [00:17<00:25, 34.91it/s]
+propagate in video:  41%|████      | 612/1494 [00:17<00:25, 35.04it/s]
+propagate in video:  41%|████      | 616/1494 [00:18<00:24, 35.14it/s]
+propagate in video:  41%|████▏     | 620/1494 [00:18<00:24, 35.21it/s]
+propagate in video:  42%|████▏     | 624/1494 [00:18<00:24, 35.25it/s]
+propagate in video:  42%|████▏     | 628/1494 [00:18<00:24, 35.28it/s]
+propagate in video:  42%|████▏     | 632/1494 [00:18<00:24, 35.31it/s]
+propagate in video:  43%|████▎     | 636/1494 [00:18<00:24, 35.28it/s]
+propagate in video:  43%|████▎     | 640/1494 [00:18<00:24, 35.29it/s]
+propagate in video:  43%|████▎     | 644/1494 [00:18<00:24, 35.17it/s]
+propagate in video:  43%|████▎     | 648/1494 [00:18<00:24, 35.24it/s]
+propagate in video:  44%|████▎     | 652/1494 [00:19<00:23, 35.26it/s]
+propagate in video:  44%|████▍     | 656/1494 [00:19<00:23, 35.30it/s]
+propagate in video:  44%|████▍     | 660/1494 [00:19<00:23, 35.30it/s]
+propagate in video:  44%|████▍     | 661/1494 [00:19<00:24, 34.24it/s]
+Traceback (most recent call last):
+  File "/home/liubov/.venv/bin/psifx", line 10, in <module>
+    sys.exit(main())
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/command.py", line 55, in main
+    args.execute(args)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/utils/command.py", line 111, in <lambda>
+    parser.set_defaults(execute=lambda args: command.execute(parser, args))
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/command.py", line 141, in execute
+    tool.infer(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/psifx/video/tracking/samurai/tool.py", line 160, in infer
+    for out_frame_idx, out_obj_ids, out_mask_logits in self.predictor.propagate_in_video(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 59, in generator_context
+    response = gen.send(request)
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 721, in propagate_in_video
+    current_out, pred_masks = self._run_single_frame_inference(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/sam2_video_predictor.py", line 937, in _run_single_frame_inference
+    current_out = self.track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 983, in track_step
+    current_out, sam_outputs, _, _ = self._track_step(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 909, in _track_step
+    pix_feat = self._prepare_memory_conditioned_features(
+  File "/home/liubov/.venv/lib/python3.10/site-packages/sam2/modeling/sam2_base.py", line 667, in _prepare_memory_conditioned_features
+    iou_score = output_dict["non_cond_frame_outputs"][i]["best_iou_score"]  # Get mask affinity score
+KeyError: 660)
+====================
