@@ -86,7 +86,7 @@ def plot_joint_trajectory(positions, joint_name, person_id):
 if __name__ == "__main__":
 
     # Paths to your JSONs
-    base_dir = "/home/liubov/Desktop/BNF/work/8-5-2024_#18_INDIVIDUAL_[12]/PosesDir"
+    base_dir = "//home/liubov/Bureau/new/8-5-2024_#18_INDIVIDUAL_[12]/processed by chunks/PosesDir/"
     patient_files = {
         "Patient1": os.path.join(base_dir, "new_jsons_merged_id_1.json"),
         "Patient2": os.path.join(base_dir, "new_jsons_merged_id_2.json"),
